@@ -3,6 +3,7 @@ import Footer from "./components/Footer"
 import Table from "./components/Table"
 import "./App.css"
 import Details from "./components/Details"
+import Textbox from "./components/Textbox"
 
 const App =()=>{
   const companyName = "Capgemini";
@@ -13,7 +14,8 @@ const App =()=>{
       <Header company ={companyName} location = {address}/>
       <h1>Welcome to Capgemini</h1>
       <Table/>
-      <Details></Details>
+      <Textbox/>
+      <Details/>
       <Footer email = {emailaddress}/>
     </div>
   )
