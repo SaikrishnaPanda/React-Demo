@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Table from "./components/Table"
 import "./App.css"
+import Details from "./components/Details"
 
 const App =()=>{
   const companyName = "Capgemini";
@@ -12,6 +13,7 @@ const App =()=>{
       <Header company ={companyName} location = {address}/>
       <h1>Welcome to Capgemini</h1>
       <Table/>
+      <Details></Details>
       <Footer email = {emailaddress}/>
     </div>
   )
