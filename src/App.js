@@ -7,6 +7,8 @@ import Textbox from "./components/Textbox"
 import { useState } from "react"
 import Display from "./components/Display"
 import Toggle from "./components/Toggle"
+import Count from "./components/Count"
+import Dropdown from "./components/Dropdown"
 
 const App =()=>{
   const companyName = "Capgemini";
@@ -17,6 +19,10 @@ const App =()=>{
   const fetchUpdates =(data)=>{
     updateUserInfo(data)
   }
+
+  // const show =()=>{
+  //   showCount()
+  // }
   return(
     <div className="container-fluid">
       <Header company ={companyName} location = {address}/>
@@ -25,6 +31,7 @@ const App =()=>{
         <Display display={personalInfo}/>
       </div>
       <Toggle/>
+      <Dropdown/>
       <h1>Welcome to Capgemini</h1>
       <Table/>
       <Details/>
