@@ -1,15 +1,17 @@
 import{useState} from "react"
 
-const Textbox = ()=>{
+const Textbox = (props)=>{
     const userObj={
-        username:""
+        username:"",
+        password:""
     };
     const [user,updateDetails] = useState(userObj)
     const updateUserDetails =(e)=>{
         console.log(e.target.value);
         let tempuser = {...user};
         tempuser[e.target.name] = e.target.value
-        updateDetails(tempuser)
+        updateDetails(tempuser)// state updateion
+        props.update(tempuser)
     }
     return (
         <div className="row">

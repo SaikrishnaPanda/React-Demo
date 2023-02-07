@@ -4,17 +4,27 @@ import Table from "./components/Table"
 import "./App.css"
 import Details from "./components/Details"
 import Textbox from "./components/Textbox"
+import { useState } from "react"
+import Display from "./components/Display"
 
 const App =()=>{
   const companyName = "Capgemini";
   const address = "India";
   const emailaddress = "Career@Capgemini.com"
+  const [personalInfo,updateUserInfo]=useState({})
+
+  const fetchUpdates =(data)=>{
+    updateUserInfo(data)
+  }
   return(
     <div className="container-fluid">
       <Header company ={companyName} location = {address}/>
+      <div>
+        <Textbox update ={fetchUpdates}/>
+        <Display display={personalInfo}/>
+      </div>
       <h1>Welcome to Capgemini</h1>
       <Table/>
-      <Textbox/>
       <Details/>
       <Footer email = {emailaddress}/>
     </div>
