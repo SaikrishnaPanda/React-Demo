@@ -6,6 +6,7 @@ import Details from "./components/Details"
 import Textbox from "./components/Textbox"
 import { useState } from "react"
 import Display from "./components/Display"
+import Toggle from "./components/Toggle"
 
 const App =()=>{
   const companyName = "Capgemini";
@@ -23,6 +24,7 @@ const App =()=>{
         <Textbox update ={fetchUpdates}/>
         <Display display={personalInfo}/>
       </div>
+      <Toggle/>
       <h1>Welcome to Capgemini</h1>
       <Table/>
       <Details/>

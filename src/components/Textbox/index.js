@@ -3,7 +3,8 @@ import{useState} from "react"
 const Textbox = (props)=>{
     const userObj={
         username:"",
-        password:""
+        password:"",
+        age:""
     };
     const [user,updateDetails] = useState(userObj)
     const updateUserDetails =(e)=>{
@@ -15,7 +16,7 @@ const Textbox = (props)=>{
     }
     return (
         <div className="row">
-            <div class = "mb-3">
+            <div className = "mb-3">
                 <label for="fromGroupExampleInput"
                 class = "from-label">User Name</label>
                 <input type="text" class="form-control"
@@ -24,7 +25,7 @@ const Textbox = (props)=>{
                 onChange={updateUserDetails}
                 placeholder="Enter user name"/>
             </div>
-            <div class = "mb-3">
+            <div className = "mb-3">
                 <label for="fromGroupExampleInput"
                 class = "from-label">Password</label>
                 <input type="text" class="form-control"
